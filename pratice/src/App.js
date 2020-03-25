@@ -11,14 +11,23 @@ const Bemvindo = props => {
   );
 };
 */
+
 const Equipe = (props) => {
   return (
     <div>
-     <Sobre nome={props.nome} cargo={props.cargo} idade={props.idade}></Sobre>
+     <Sobre nome={props.nome} cargo={props.cargo} idade={props.idade}/>
+     <Social fb={props.fb} />
+     <hr/>
     </div>
   );
 };
-
+const Social = (props) => {
+  return (
+    <div>
+      <a href={props.fb}>Facebook </a>
+    </div>
+  );
+  };
 const Sobre = (props) => {
   return (
     <div>
@@ -27,13 +36,13 @@ const Sobre = (props) => {
       <h2>E tenho :  {props.idade}</h2>
     </div>
   );
-}
+};
 
 function App() {
   return (
     <div>
       <h1>Conheça nossa equipe:</h1>
-      <Equipe nome="Eder" cargo="Pesquisador" idade="29"></Equipe>
+      <Equipe nome="Eder" cargo="Pesquisador" idade="29" fb="https://www.facebook.com/"/>
       {/* <h1>Hello World</h1>
       <h2>Curso React</h2>
       <Bemvindo nome="Eder" anos="18" /> */}
